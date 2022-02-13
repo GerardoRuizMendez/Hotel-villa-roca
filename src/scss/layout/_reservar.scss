@@ -1,0 +1,104 @@
+label {
+    display: block;
+}
+
+.Contacto p {
+    font-size: 1.4rem;
+    color: #4f4f4f;
+    margin: 2rem 0 0 0;
+}
+
+legend {
+    font-size: 2rem;
+    color: #4f4f4f;
+}
+
+label {
+    font-weight: 700;
+    text-transform: uppercase;
+    display: block;
+    span {
+        color: #af0000;
+        font-size: 2rem;
+    }
+    &:first-of-type {
+        span {
+            font-size: 1.2rem;
+        }
+    }
+}
+
+input:not([type="submit"]),
+textarea,
+select {
+    padding: 1rem;
+    display: block;
+    width: 100%;
+    background-color: #e1e1e1;
+    margin-bottom: 2rem;
+    border: none;
+    border-radius: 1rem;
+}
+
+input[type="radio"] {
+    width: auto;
+    margin: 0;
+}
+
+select {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+textarea {
+    height: 20rem;
+    resize: none;
+}
+
+.formaContacto {
+    max-width: 30rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Contacto-bg {
+    background-image: url(../../build/img/destacada3.jpg);
+    height: 40rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.formulario {
+    .caja1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .caja2 {
+            padding: 2rem 7rem;
+        }
+    }
+    border-radius: 3rem 3rem 0 0;
+    background-color: white;
+    padding: $separacion/2 $separacion;
+    margin-top: -$separacion*2;
+    &.sesion {
+        margin-top: 0;
+        border-radius: 0;
+    }
+    img {
+        width: 30%;
+    }
+    .Contacto_centrar {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+    }
+}
+
+.Contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

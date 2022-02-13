@@ -1,0 +1,14 @@
+@import 'base/normalize';
+@import 'base/variables';
+@import 'base/mixins';
+@import 'base/globales';
+@import 'base/utilidades';
+//UI
+@import "layout/header.scss";
+@import "layout/footer.scss";
+@import "layout/navegacion.scss";
+@import "layout/main.scss";
+@import "layout/iconos.scss";
+@import "layout/Reservar.scss";
+@import "layout/sesionIniciada.scss";
+@import "layout/reporte.scss";

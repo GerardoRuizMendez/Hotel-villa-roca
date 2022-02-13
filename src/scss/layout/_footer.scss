@@ -1,0 +1,15 @@
+.footer {
+    padding: 1rem 0;
+    background-color: $grisOscuro;
+    .contenido-footer {
+        padding: $separacion/2 0 $separacion/2;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+    .copyright {
+        color: $blanco;
+        text-align: center;
+        margin: 0;
+    }
+}

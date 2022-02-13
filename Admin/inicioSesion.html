@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Villa Roca</title>
+    <link rel="stylesheet" href="../build/css/app.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="contenedor contenido-header">
+
+            <div class="barra">
+                <a href="../index.html">
+                    <img src="../build/img/logo.svg" alt="hola">
+                </a>
+
+                <nav class="navegacion">
+                    <a href="Nosotros.html">Nosotros</a>
+                    <a href="Anuncios.html">Anuncios</a>
+                    <a href="Contacto.html">Contacto</a>
+                    <a href="../Reservar.php">Reservar</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="contenedor formulario sesion sombra">
+
+        <form class="Contacto" action="php/comprobarUsuario.php" method="post">
+            <div class="Contacto_centrar">
+                <legend>Inicio de sesión</legend>
+                <img src="../build/img/login.png" alt="Inicio de sesion">
+            </div>
+            <div>
+                <label for="nombre">Usuario:</label> <input class="corto" type="text" name="nombre">
+                <label for="nombre">Contraseña:</label> <input class="corto" type="password" name="pass" placeholder="****">
+            </div>
+            <div>
+                <input type="submit" value="Entrar" name="enviar">
+            </div>
+        </form>
+    </main>
+    <footer class="footer">
+        <div class="contenido-footer contenedor">
+            <div class="contenedor contenedor-footer">
+                <nav class="navegacion">
+                    <a href="Nosotros.html">Nosotros</a>
+                    <a href="Anuncios.html">Anuncios</a>
+                    <a href="blog.html">blog</a>
+                    <a href="Contacto.html">Contacto</a>
+                </nav>
+            </div>
+            <p class="copyright">Todos los derechos resevados &#174</p>
+        </div>
+    </footer>
+    <script src="build/js/bundle.js"></script>
+</body>
+
+</html>

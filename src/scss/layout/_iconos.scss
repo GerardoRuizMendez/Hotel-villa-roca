@@ -1,0 +1,28 @@
+.seccion_iconos {
+    background-color: #f0f0f0;
+    padding-bottom: $separacion*2;
+}
+
+.iconos {
+    margin: 0 8rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    padding: 0 1.5rem;
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        a {
+            text-align: center;
+            justify-content: center;
+            text-decoration: none;
+            color: #2d3359;
+        }
+        p {
+            font-weight: 300;
+            font-size: 1.8rem;
+            line-height: 1.5;
+        }
+    }
+}
