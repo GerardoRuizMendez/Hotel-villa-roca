@@ -1,6 +1,6 @@
 .principal {
     border-radius: 1rem 1rem 0 0;
-    padding: $separacion/2;
+    padding: calc($separacion/2);
     margin-top: -7rem;
     background-color: #FFFFFF;
     display: grid;

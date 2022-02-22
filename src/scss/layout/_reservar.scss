@@ -80,7 +80,7 @@ textarea {
     }
     border-radius: 3rem 3rem 0 0;
     background-color: white;
-    padding: $separacion/2 $separacion;
+    padding: calc($separacion/2) $separacion;
     margin-top: -$separacion*2;
     &.sesion {
         margin-top: 0;

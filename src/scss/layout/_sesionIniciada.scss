@@ -78,7 +78,7 @@
 }
 
 .alerta {
-    padding: $separacion/2;
+    padding: calc($separacion/2);
     text-align: center;
     color: $blanco;
     width: 100%;

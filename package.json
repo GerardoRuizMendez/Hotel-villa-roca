@@ -1,0 +1,29 @@
+{
+  "name": "hotel-villa-roca",
+  "version": "1.0.0",
+  "description": "Proyecto escolar",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GerardoRuizMendez/Hotel-villa-roca.git"
+  },
+  "keywords": [
+    "sass",
+    "gulp"
+  ],
+  "author": "Gerardo Ruiz Mendez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GerardoRuizMendez/Hotel-villa-roca/issues"
+  },
+  "homepage": "https://github.com/GerardoRuizMendez/Hotel-villa-roca#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.49.8"
+  }
+}
