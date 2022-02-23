@@ -5,7 +5,7 @@
         $id_cliente="SELECT auto_increment FROM INFORMATION_SCHEMA.TABLES WHERE table_name = 'cliente' AND table_schema = 'villaroca'";//Esta instruccion devuelve el id a ingresar
         $id_cliente=$base->query($id_cliente);
         $id_cliente=$id_cliente->fetch(PDO::FETCH_ASSOC);
-        $id_cliente=$id_cliente["auto_increment"];
+        $id_cliente=$id_cliente["AUTO_INCREMENT"];
 
         $id_habitacion="SELECT id_habitacion FROM habitacion WHERE numero='" . $nombreHabitacion . "'";//Esta instruccion devuelve el id a ingresar
         $id_habitacion=$base->query($id_habitacion);
@@ -61,12 +61,12 @@
                 if($consulta3["id_disponibilidad"]==3)$posible=2; //al no estar disponible, la variable vale 2
                 
                 if($posible==0){ 
-                    $consulta3="UPDATE habitacion SET id_disponibilidad=1 WHERE id_habitacion='" . $registro["numero"] . "'";
+                    $consulta3="UPDATE habitacion SET id_disponibilidad=1 WHERE numero='" . $registro["numero"] . "'";
                     $consulta3=$base->query($consulta3);
                     $reservaciones[$registro["numero"]]="verde"; //guardamos en el arreglo el color en que sera dibujado
                     
                 }else if($posible==1){
-                    $consulta3="UPDATE habitacion SET id_disponibilidad=1 WHERE id_habitacion='" . $registro["numero"] . "'";
+                    $consulta3="UPDATE habitacion SET id_disponibilidad=1 WHERE numero='" . $registro["numero"] . "'";
                     $consulta3=$base->query($consulta3);
                     $reservaciones[$registro["numero"]]="rojo"; //guardamos en el arreglo el color en que sera dibujado
                 }else if($posible==2){
