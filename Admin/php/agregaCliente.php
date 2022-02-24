@@ -26,14 +26,19 @@
                     }
                 }
                 if($posible){
-                    echo "Registrado correctamente while<br>";
-                    registrar($nombre, $telefono, $email, $fechaI, $fechaS, $registro["numero"]);
-                    break;
+                    $consulta="SELECT id_disponibilidad FROM habitacion WHERE numero='" . $registro["numero"] . "'";
+                    $consulta=$base->query($consulta);
+                    $registro2=$consulta->fetch(PDO::FETCH_ASSOC);;
+                    if($registro2["id_disponibilidad"]!=3){
+                        echo "Registrado correctamente while<br>";
+                        registrar($nombre, $telefono, $email, $fechaI, $fechaS, $registro["numero"]);
+                        break;
+                    }
                 }
         }
 
     
-        header("location:../../Reservar.php");
+        //header("location:../../Reservar.php");
     }catch(Exception $e){
         die("Error: " . $e->getMessage());
     }

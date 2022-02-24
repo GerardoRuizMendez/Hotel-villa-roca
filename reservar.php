@@ -59,13 +59,8 @@
                 <input type="date" min="<?php echo Date("Y-m-d"); ?>" id="fechaS" name="fechaS">
                 <label for="hora">Hora de salida:</label>
                 <input type="time" id="horaS" name="horaS">
-                <p>Como desea ser Contactado para confirmar la reservación:<span style="color: #af0000">*</span></p>
-                <div class="formaContacto">
-                    <label for="tel">Teléfono</label>
-                    <input type="radio" name="Contacto" value="tel" id="tel">
-                    <label for="correo">E-mail</label>
-                    <input type="radio" name="Contacto" value="correo" id="correo">
-                </div>
+                <p>--------------------------------------------------------</p>
+                
             </fieldset>
             <input type="submit" id="enviar" value="Enviar" class="boton botonVerde">
         </form>
