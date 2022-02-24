@@ -2,22 +2,31 @@
     
     function registrar($nombre, $telefono, $email, $fechaI, $fechaS, $nombreHabitacion){
         include("conexion.php");
-        $id_cliente="SELECT auto_increment FROM INFORMATION_SCHEMA.TABLES WHERE table_name = 'cliente' AND table_schema = 'villaroca'";//Esta instruccion devuelve el id a ingresar
-        $id_cliente=$base->query($id_cliente);
-        $id_cliente=$id_cliente->fetch(PDO::FETCH_ASSOC);
-        $id_cliente=$id_cliente["auto_increment"];
 
+        $consulta="SELECT id_cliente FROM cliente WHERE email='" . $email . "'";
+        $consulta=$base->query($consulta);
+        
+        if($consulta=$consulta->fetch(PDO::FETCH_ASSOC)){
+            $id_cliente=$consulta["id_cliente"];
+        }else{
+            $id_cliente="SELECT auto_increment FROM INFORMATION_SCHEMA.TABLES WHERE table_name = 'cliente' AND table_schema = 'villaroca'";//Esta instruccion devuelve el id a ingresar
+            $id_cliente=$base->query($id_cliente);
+            $id_cliente=$id_cliente->fetch(PDO::FETCH_ASSOC);
+            $id_cliente=$id_cliente["auto_increment"];
+
+            $sql="INSERT INTO cliente VALUES(null, :nombre, null, null, :telefono, :email)";
+            $resultado=$base->prepare($sql);
+            $resultado->bindValue(":nombre",$nombre);
+            $resultado->bindValue(":telefono",$telefono);
+            $resultado->bindValue(":email",$email);
+            $resultado->execute(); //no hay que pasar array por el bindValue
+        }
+        
         $id_habitacion="SELECT id_habitacion FROM habitacion WHERE numero='" . $nombreHabitacion . "'";//Esta instruccion devuelve el id a ingresar
         $id_habitacion=$base->query($id_habitacion);
         $id_habitacion=$id_habitacion->fetch(PDO::FETCH_ASSOC);
         $id_habitacion=$id_habitacion["id_habitacion"];
-        echo $id_habitacion . "<br>";        
-        $sql="INSERT INTO cliente VALUES(null, :nombre, null, null, :telefono, :email)";
-        $resultado=$base->prepare($sql);
-        $resultado->bindValue(":nombre",$nombre);
-        $resultado->bindValue(":telefono",$telefono);
-        $resultado->bindValue(":email",$email);
-        $resultado->execute(); //no hay que pasar array por el bindValue
+        echo $id_habitacion . "<br>";
 
         $sql="INSERT INTO reservacion VALUES(null, '" . $fechaI . "', '" . $fechaS . "', 0, 0, " . $id_cliente . ", " . $id_habitacion . ")";
         var_dump($sql);

@@ -2,7 +2,7 @@ CREATE DATABASE villaRoca;
 USE villaRoca;
 
 CREATE TABLE Cliente(
-id_cliente int(11) not null primary key auto_increment,
+id_cliente int(11) not null primary key AUTO_INCREMENT,
     nombre varchar(20) not null,
     ap_paterno varchar(20),
     ap_materno varchar(20),
@@ -38,7 +38,6 @@ CREATE TABLE Reservacion(
     fecha_salida DATETIME,
     total int(11) not null,
     descuento int(11) not null,
-    codigo varchar(20),
     id_cliente int(11),
     id_habitacion int(11),
     FOREIGN KEY (id_cliente) REFERENCES Cliente(id_cliente)
@@ -63,3 +62,27 @@ create table administradores(
     password varchar(255) not null,
 rol varchar(20) not null
 );
+
+INSERT INTO administradores VALUES(null, "Gerardo", "1234", "admin");
+
+INSERT INTO disponibilidad VALUES(null, "disponible");
+INSERT INTO disponibilidad VALUES(null, "no disponible");
+INSERT INTO disponibilidad VALUES(null, "mantenimiento");
+
+INSERT INTO tipo_habitacion VALUES(null, "una cama");
+INSERT INTO tipo_habitacion VALUES(null, "dos camas");
+INSERT INTO tipo_habitacion VALUES(null, "semi suite");
+INSERT INTO tipo_habitacion VALUES(null, "suite");
+
+INSERT INTO habitacion VALUES(null, "P1H1", 200, 1,1);
+INSERT INTO habitacion VALUES(null, "P1H2", 200, 1,1);
+INSERT INTO habitacion VALUES(null, "P1H3", 200, 1,1);
+INSERT INTO habitacion VALUES(null, "P1H4", 300, 2,1);
+INSERT INTO habitacion VALUES(null, "P1H5", 300, 2,1);
+INSERT INTO habitacion VALUES(null, "P2H1", 200, 1,1);
+INSERT INTO habitacion VALUES(null, "P2H2", 200, 1,1);
+INSERT INTO habitacion VALUES(null, "P2H3", 200, 1,1);
+INSERT INTO habitacion VALUES(null, "P2H4", 300, 2,1);
+INSERT INTO habitacion VALUES(null, "P2H5", 300, 2,1);
+INSERT INTO habitacion VALUES(null, "P3H1", 500, 3,1);
+INSERT INTO habitacion VALUES(null, "P3H2", 1000, 4,1);
