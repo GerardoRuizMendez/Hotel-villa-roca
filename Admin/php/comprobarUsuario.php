@@ -12,11 +12,11 @@
             $_SESSION["pass"]=$pass;
             if($registro["rol"]=="admin"){
                 $_SESSION["rol"]="admin";
-                header("location:sesionIniciada.php");
+                
             }else{
                 $_SESSION["rol"]="recepcionista";
-                header("location:sesionIniciadaR.php");
             }
+            header("location:sesionIniciada.php");
             //
         }else{
             header("location:../inicioSesion.html");

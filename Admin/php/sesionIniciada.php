@@ -61,6 +61,9 @@
                 </table>
             </div>
 
+            
+        <?php session_start(); 
+        if($_SESSION["rol"]=="admin"){?>    
             <div class="CRUD">
                 <h2 class="centrarTexto">Opciones</h2>
                 <a href="CRUDcliente.php">● Clientes</a><br>
@@ -70,6 +73,8 @@
                 <a href="CRUDtipo.php">● Tipo</a><br>
                 <a href="CRUDadmins.php">● Usuarios</a><br>
             </div>
+        <?php } ?>
+            
         </div>
 
         <div class="simbologia">
