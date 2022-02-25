@@ -44,24 +44,24 @@
 
             <?php
                 while($registro=$conexion->fetch(PDO::FETCH_OBJ)){
-                    echo "<form action='accionesReservacion.php' method='post'>"; //habra un formulario por cada tr
-                    echo"<tr>";
+                    ?><form action='accionesCliente.php' method='post'><?php
+                    ?><tr><?php
                     $n=0;
                     foreach($registro as $r){
                         
                         if($n>0){//los que no sean el primero apareceran en cuadro de texto
-                            echo"<td class='noPad'>";
-                            echo "<input class='ancho' type='text' name='$n' value='$r'>";
-                            echo"</td>";
+                            ?><td class='noPad'><?php
+                            ?><input class='ancho' type='text' name='<?php echo $n;?>' value='<?php echo $r;?>'><?php
+                            ?></td><?php
                         }else{
-                            echo "<input type='hidden' name='$n' value='$r'>";
+                            ?><input type='hidden' name='<?php echo $n;?>' value='<?php echo $r;?>'><?php
                         }
                         $n++;
                     }
-                    echo "<td><input type='submit' class='quitarMargen boton botonVerde' name='delete' id='del' value='Borrar'></td>";
-                    echo "<td><input type='submit' class='quitarMargen boton botonVerde' name='update' id='up' value='Actualizar'></td>";
-                    echo "</tr>";
-                    echo "</form>";
+                    ?><td><input type='submit' class='quitarMargen boton botonVerde' name='delete' id='del' value='Borrar'></td><?php
+                    ?><td><input type='submit' class='quitarMargen boton botonVerde' name='update' id='up' value='Actualizar'></td><?php
+                    ?></tr><?php
+                    ?></form><?php
                 }
             ?>
                 <form action='accionesCliente.php' method='post'>

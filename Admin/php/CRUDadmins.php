@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Usuarios</title>
+    <title>Clientes</title>
     <link rel="stylesheet" href="../../build/css/app.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
 </head>
@@ -31,42 +31,42 @@
         $conexion=$base->query("SELECT * FROM administradores");
     ?>
 
-        <h1>Módulo de usuarios</h1>
+        <h1>CRUD (Clientes)</h1>
         <table border="0" align="center">
             <tr>
                 <td class="primera_fila">Nombre</td>
                 <td class="primera_fila">Contraseña</td>
-                <td class="primera_fila">Rol</td>
+                <td class="primera_fila">rol</td>
             </tr>
 
             <?php
                 while($registro=$conexion->fetch(PDO::FETCH_OBJ)){
-                    echo "<form action='accionesAdmins.php' method='post'>"; //habra un formulario por cada tr
-                    echo"<tr>";
+                    ?><form action='accionesCliente.php' method='post'><?php
+                    ?><tr><?php
                     $n=0;
                     foreach($registro as $r){
                         
                         if($n>0){//los que no sean el primero apareceran en cuadro de texto
-                            echo"<td class='noPad'>";
-                            echo "<input class='ancho' type='text' name='$n' value='$r'>";
-                            echo"</td>";
+                            ?><td class='noPad'><?php
+                            ?><input class='ancho' type='text' name='<?php echo $n;?>' value='<?php echo $r;?>'><?php
+                            ?></td><?php
                         }else{
-                            echo "<input type='hidden' name='$n' value='$r'>";
+                            ?><input type='hidden' name='<?php echo $n;?>' value='<?php echo $r;?>'><?php
                         }
                         $n++;
                     }
-                    echo "<td><input class='quitarMargen boton botonVerde' type='submit' name='delete' id='del' value='Borrar'></td>";
-                    echo "<td><input class='quitarMargen boton botonVerde' type='submit' name='update' id='up' value='Actualizar'></td>";
-                    echo "</tr>";
-                    echo "</form>";
+                    ?><td><input type='submit' class='quitarMargen boton botonVerde' name='delete' id='del' value='Borrar'></td><?php
+                    ?><td><input type='submit' class='quitarMargen boton botonVerde' name='update' id='up' value='Actualizar'></td><?php
+                    ?></tr><?php
+                    ?></form><?php
                 }
             ?>
-                <form action='accionesAdmins.php' method='post'>
+                <form action='accionesCliente.php' method='post'>
                     <tr>
                         <td><input type='text' name='1'></td>
                         <td><input type='text' name='2'></td>
                         <td><input type='text' name='3'></td>
-                        <td class=''><input class='quitarMargen boton botonVerde' type='submit' name='create' id='cr' value='Insertar'></td>
+                        <td class=''><input type='submit' class='quitarMargen boton botonVerde' name='create' id='cr' value='Insertar'></td>
                     </tr>
                 </form>
         </table>
