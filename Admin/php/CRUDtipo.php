@@ -39,7 +39,7 @@
 
             <?php
                 while($registro=$conexion->fetch(PDO::FETCH_OBJ)){
-                    ?><form action='accionesCliente.php' method='post'><?php
+                    ?><form action='accionesTipo.php' method='post'><?php
                     ?><tr><?php
                     $n=0;
                     foreach($registro as $r){

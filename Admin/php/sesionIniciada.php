@@ -105,6 +105,9 @@
             <div class="cobrar">
                 <a class="boton botonVerde" href="reportes.php">Reportes</a>
             </div>
+            <div class="cobrar">
+                <a class="boton botonVerde" href="cambiarDisponibilidad.php">Cambiar disponibilidad</a>
+            </div>
         </div>
     </main>
     <footer class="footer">

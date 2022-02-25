@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Clientes</title>
+    <title>Usuarios</title>
     <link rel="stylesheet" href="../../build/css/app.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
 </head>
@@ -41,7 +41,7 @@
 
             <?php
                 while($registro=$conexion->fetch(PDO::FETCH_OBJ)){
-                    ?><form action='accionesCliente.php' method='post'><?php
+                    ?><form action='accionesAdmins.php' method='post'><?php
                     ?><tr><?php
                     $n=0;
                     foreach($registro as $r){

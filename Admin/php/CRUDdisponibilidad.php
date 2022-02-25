@@ -37,9 +37,9 @@
                 <td class="primera_fila">Disponibilidad</td>
             </tr>
 
-            <<?php
+            <?php
                 while($registro=$conexion->fetch(PDO::FETCH_OBJ)){
-                    ?><form action='accionesCliente.php' method='post'><?php
+                    ?><form action='accionesDisponibilidad.php' method='post'><?php
                     ?><tr><?php
                     $n=0;
                     foreach($registro as $r){
