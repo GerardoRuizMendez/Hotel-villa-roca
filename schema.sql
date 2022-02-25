@@ -4,8 +4,6 @@ USE villaRoca;
 CREATE TABLE Cliente(
 id_cliente int(11) not null primary key AUTO_INCREMENT,
     nombre varchar(20) not null,
-    ap_paterno varchar(20),
-    ap_materno varchar(20),
     telefono varchar(20) not null,
     email varchar(50) not null
 );
@@ -65,8 +63,7 @@ rol varchar(20) not null
 
 INSERT INTO administradores VALUES(null, "Gerardo", "1234", "admin");
 
-INSERT INTO disponibilidad VALUES(null, "disponible");
-INSERT INTO disponibilidad VALUES(null, "no disponible");
+INSERT INTO disponibilidad VALUES(null, "activa");
 INSERT INTO disponibilidad VALUES(null, "mantenimiento");
 
 INSERT INTO tipo_habitacion VALUES(null, "una cama");

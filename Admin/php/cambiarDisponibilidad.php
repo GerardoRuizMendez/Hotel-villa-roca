@@ -52,9 +52,8 @@
                         }else if($n==4){
                             ?><td class='noPad'><?php
                             ?><select id="4" name="4"><?php
-                                ?><option value="1" <?php if($r==1)echo "selected"; ?>>Disponible</option><?php
-                                ?><option value="2" <?php if($r==2)echo "selected"; ?>>No disponible</option><?php
-                                ?><option value="3" <?php if($r==3)echo "selected"; ?>>Mantenimiento</option><?php
+                                ?><option value="1" <?php if($r==1)echo "selected"; ?>>Activa</option><?php
+                                ?><option value="2" <?php if($r==2)echo "selected"; ?>>Mantenimiento</option><?php
                             ?></select><?php
                             ?></td><?php
                         }else{

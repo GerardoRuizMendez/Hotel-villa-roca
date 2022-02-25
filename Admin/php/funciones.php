@@ -14,7 +14,7 @@
             $id_cliente=$id_cliente->fetch(PDO::FETCH_ASSOC);
             $id_cliente=$id_cliente["auto_increment"];
 
-            $sql="INSERT INTO cliente VALUES(null, :nombre, null, null, :telefono, :email)";
+            $sql="INSERT INTO cliente VALUES(null, :nombre, :telefono, :email)";
             $resultado=$base->prepare($sql);
             $resultado->bindValue(":nombre",$nombre);
             $resultado->bindValue(":telefono",$telefono);

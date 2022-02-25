@@ -35,8 +35,6 @@
         <table border="0" align="center">
             <tr>
                 <td class="primera_fila">Nombre</td>
-                <td class="primera_fila">Apellido paterno</td>
-                <td class="primera_fila">Apellido materno</td>
                 <td class="primera_fila">Teléfono</td>
                 <td class="primera_fila">E-mail</td>
             </tr>
@@ -66,8 +64,6 @@
                 <form action='accionesCliente.php' method='post'>
                     <tr>
                         <td><input type='text' name='1'></td>
-                        <td><input type='text' name='2'></td>
-                        <td><input type='text' name='3'></td>
                         <td><input type='text' name='4'></td>
                         <td><input type='text' name='5'></td>
                         <td class=''><input type='submit' class='quitarMargen boton botonVerde' name='create' id='cr' value='Insertar'></td>
