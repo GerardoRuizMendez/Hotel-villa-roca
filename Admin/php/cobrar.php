@@ -9,20 +9,11 @@
 </head>
 
 <body>
-    <?php
-        session_start();
-        $r;
-        if($_SESSION["rol"]=="admin"){
-            $r="";
-        }else{
-            $r="R";
-        }
-    ?>
     <header class="header">
         <div class="contenedor contenido-header">
 
             <div class="barra">
-            <a href="<?php echo "sesionIniciada" . $r . ".php" ?>">
+            <a href="sesionIniciada.php">
                     <img src="../../build/img/logo.svg" alt="hola">
                 </a>
 
