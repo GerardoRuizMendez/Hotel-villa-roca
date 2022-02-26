@@ -68,16 +68,12 @@
                 }
                 $consulta3=$base->query("SELECT id_disponibilidad FROM habitacion WHERE numero='" . $registro["numero"] . "'");
                 $consulta3=$consulta3->fetch(PDO::FETCH_ASSOC);
-                if($consulta3["id_disponibilidad"]==3)$posible=2; //al no estar disponible, la variable vale 2
+                if($consulta3["id_disponibilidad"]==2)$posible=2; //al no estar disponible, la variable vale 2
                 
                 if($posible==0){ 
-                    $consulta3="UPDATE habitacion SET id_disponibilidad=1 WHERE numero='" . $registro["numero"] . "'";
-                    $consulta3=$base->query($consulta3);
                     $reservaciones[$registro["numero"]]="verde"; //guardamos en el arreglo el color en que sera dibujado
                     
                 }else if($posible==1){
-                    $consulta3="UPDATE habitacion SET id_disponibilidad=1 WHERE numero='" . $registro["numero"] . "'";
-                    $consulta3=$base->query($consulta3);
                     $reservaciones[$registro["numero"]]="rojo"; //guardamos en el arreglo el color en que sera dibujado
                 }else if($posible==2){
                     $reservaciones[$registro["numero"]]="naranja"; //guardamos en el arreglo el color en que sera dibujado
