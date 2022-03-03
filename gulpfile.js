@@ -38,8 +38,9 @@ function javascript(done){
     done();
 }
 
-function dev(done){
+function autocompila(done){
     watch("src/scss/**/*.scss",css);
+    watch("src/js/**/*.js",javascript);
     done();
 }
 
@@ -82,5 +83,5 @@ exports.javascript=javascript;
 exports.versionWebp=versionWebp;
 exports.versionAvif=versionAvif;
 exports.imagenes=parallel(versionWebp, versionWebp, imagenes, versionAvif);
-exports.dev=dev;
+exports.default=parallel(css, javascript,autocompila);
 
